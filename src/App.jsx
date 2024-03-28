@@ -9,8 +9,8 @@ export default function App() {
     if (timer > 0) {
       var id = setInterval(() => {
         setTimer((x) => {
-          x = x - 1;
-          if (x === 0) clearInterval(id);
+          if (x <= 0) clearInterval(id);
+          else x = x - 1;
           return x;
         });
       }, 1000);
